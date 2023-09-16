@@ -1,3 +1,20 @@
+function habilitarTarea1(){
+  limpiarMenuInicial()
+}
+
+const $buttonTarea1 = document.querySelector('#tarea1')
+
+$buttonTarea1.onclick = habilitarTarea1
+
+function limpiarMenuInicial(){
+  let botones = document.querySelectorAll(".botones");
+  botones.forEach(element => {
+    element.setAttribute('disabled', 'disabled');    
+  });
+
+}
+
+
 /*
 Cosas a tener en cuenta:
 1. Los <input> no tienen .innerText, en vez de eso, usan .value. https://developer.mozilla.org/es/docs/Web/HTML/Elemento/input
@@ -18,9 +35,6 @@ $botonCalcular.onclick = function()
 */
 
 //TAREA: completar tareas/clase-5/index.html para que incluya tarea-clase-5.js
-
-console.log("tearea clase 5 exito")
-
 //TAREA: crear un formulario donde un usuario pueda ingresar su salario anual.
 //cuando el usuario haga click en el botón "calcular", mostrar el salario mensual
 // en una caja de texto deshabilitada. --> <input type="text" disabled id="salario-mensual"/>
