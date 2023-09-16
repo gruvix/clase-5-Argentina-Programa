@@ -8,10 +8,10 @@ let apellido
 let edad
 
 function guardarInformacion(){
-  nombre = document.querySelector('#nombre')
-  segundoNombre = document.querySelector('#segundo-nombre')
-  apellido = document.querySelector('#apellido')
-  edad = Number(document.querySelector('#edad'))
+  nombre = document.querySelector('#nombre').value
+  segundoNombre = document.querySelector('#segundo-nombre').value
+  apellido = document.querySelector('#apellido').value
+  edad = Number(document.querySelector('#edad')).value
 }
 
 function mostrarTexto(){
