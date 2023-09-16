@@ -18,7 +18,6 @@ function lockMenuInicial(){
 
 //tarea 1
 function habilitarTarea1(){
-  alert('Tarea 1')
   window.location = "tarea1.html"
 }
 //tarea 2
