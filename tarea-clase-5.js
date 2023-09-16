@@ -1,19 +1,34 @@
-function habilitarTarea1(){
-  limpiarMenuInicial()
+//Todas las tareas deben estar declaradas en este array
+let funcionesBotones = [habilitarTarea1, habilitarTarea2, habilitarTarea3]
+
+const $botones = document.querySelectorAll(".botones")
+for(let i = 0; i< $botones.length; i++){
+  //agrega la funcion de la tarea de cada boton, de esta manera se pueden agregar X tareas y botones sin tener que inicializar cada uno
+  $botones[i].addEventListener("click", funcionesBotones[i]) 
+  //Agrega la funcion lockMenuInicial a cada boton para evitar que se elija otra tarea
+  $botones[i].addEventListener("click", lockMenuInicial)
 }
 
-const $buttonTarea1 = document.querySelector('#tarea1')
-
-$buttonTarea1.onclick = habilitarTarea1
-
-function limpiarMenuInicial(){
-  let botones = document.querySelectorAll(".botones");
-  botones.forEach(element => {
+function lockMenuInicial(){
+  $botones.forEach(element => {
+    //deshabilita los botones de tarea
     element.setAttribute('disabled', 'disabled');    
   });
-
 }
 
+//tarea 1
+function habilitarTarea1(){
+  alert('Tarea 1')
+  window.location = "tarea1.html"
+}
+//tarea 2
+function habilitarTarea2(){
+  alert('Tarea 2')
+}
+//tarea 3
+function habilitarTarea3(){
+  alert('Tarea 3')
+}
 
 /*
 Cosas a tener en cuenta:
