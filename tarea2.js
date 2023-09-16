@@ -1,8 +1,29 @@
-//toma boton de html
+const $enviarInformacion = document.querySelector("#enviar-informacion")
+$enviarInformacion.addEventListener("click", guardarInformacion)
+$enviarInformacion.addEventListener("click", mostrarTexto)
+
+let nombre
+let segundoNombre
+let apellido
+let edad
+
+function guardarInformacion(){
+  nombre = document.querySelector('#nombre')
+  segundoNombre = document.querySelector('#segundo-nombre')
+  apellido = document.querySelector('#apellido')
+  edad = Number(document.querySelector('#edad'))
+}
+
+function mostrarTexto(){
+  let texto = `Tu nombre es ${nombre}, tu segundo nombre es ${segundoNombre}, tu apellido es ${apellido} y tenés ${edad} años`
+  console.log(texto)
+}
+
+
+
+//agregar funcion con boton de volver a menu de seleccion
 const $botonVolverASelector = document.querySelector("#volver-a-selector")
-//agrega funcion a boton
 $botonVolverASelector.addEventListener("click", volverASelector) 
-//funcion volver a menu de seleccion
 function volverASelector(){
   window.location = "index.html"
 }
