@@ -1,4 +1,4 @@
-//Todas las tareas deben estar declaradas en este array
+//Indice de tareas - todas las tareas deben estar declaradas en este array
 let funcionesBotones = [habilitarTarea1, habilitarTarea2, habilitarTarea3]
 
 const $botones = document.querySelectorAll(".botones")
@@ -9,6 +9,7 @@ for(let i = 0; i< $botones.length; i++){
   $botones[i].addEventListener("click", lockMenuInicial)
 }
 
+//esta funcion es obsoleta ya que al seleccionar cualquier tarea se va a otra página
 function lockMenuInicial(){
   $botones.forEach(element => {
     //deshabilita los botones de tarea
@@ -22,7 +23,7 @@ function habilitarTarea1(){
 }
 //tarea 2
 function habilitarTarea2(){
-  alert('Tarea 2')
+  window.location = "tarea2.html"
 }
 //tarea 3
 function habilitarTarea3(){
