@@ -17,6 +17,7 @@ const $botonVolverASelector = document.querySelector("#volver-a-selector")
 //agrega funcion a boton
 $botonVolverASelector.addEventListener("click", volverASelector) 
 
+//funcion volver a menu de seleccion
 function volverASelector(){
   window.location = "index.html"
 }
