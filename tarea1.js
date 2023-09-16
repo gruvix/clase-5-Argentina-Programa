@@ -1,12 +1,16 @@
-
-
+//toma boton de html
 const $botonCalcularSalarioMensual = document.querySelector("#calcular-salario-mensual")
+//agrega funcion a boton
 $botonCalcularSalarioMensual.addEventListener("click", calcularSalarioMensual) 
 
 
+
 function calcularSalarioMensual(){
+    //toma valor de salario anual
     const salarioAnual = Number(document.querySelector('#salario-anual').value);
+    //se calcula salario mensual
     let salarioMensual = salarioAnual / 12;
+    //se actualiza valor de salario mensual
     document.querySelector('#salario-mensual').value = salarioMensual;
 }
 
