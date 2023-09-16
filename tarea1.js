@@ -3,12 +3,19 @@
 const $botonCalcularSalarioMensual = document.querySelector("#calcular-salario-mensual")
 $botonCalcularSalarioMensual.addEventListener("click", calcularSalarioMensual) 
 
+const $botonLimpiar = document.querySelector("#reset")
+$botonLimpiar.addEventListener("click", limpiar) 
+
 function calcularSalarioMensual(){
     const salarioAnual = Number(document.querySelector('#salario-anual').value);
     let salarioMensual = salarioAnual / 12;
     document.querySelector('#salario-mensual').value = salarioMensual;
 }
 
+function limpiar(){
+    document.querySelector('#salario-anual').value = ""
+    document.querySelector('#salario-mensual').value = ""
+}
 
 
 
