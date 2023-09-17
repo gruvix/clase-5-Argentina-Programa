@@ -6,7 +6,7 @@ let nombre
 let segundoNombre
 let apellido
 let edad
-
+let esPrimerEnvio = true;
 function guardarInformacion(){
   nombre = document.querySelector('#nombre').value
   segundoNombre = document.querySelector('#segundo-nombre').value
@@ -16,7 +16,11 @@ function guardarInformacion(){
 
 function mostrarTexto(){
   let texto = `Tu nombre es ${nombre}, tu segundo nombre es ${segundoNombre}, tu apellido es ${apellido} y tenés ${edad} años`
-  console.log(texto)
+  if(esPrimerEnvio){
+    esPrimerEnvio = false
+    const michelinImagen = document.querySelector('#michelin');
+    michelinImagen.style.display = 'block';
+  }
 }
 
 
