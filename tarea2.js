@@ -18,8 +18,8 @@ function mostrarTexto(){
   let texto = `Tu nombre es ${nombre}, tu segundo nombre es ${segundoNombre}, tu apellido es ${apellido} y tenés ${edad} años`
   if(esPrimerEnvio){
     esPrimerEnvio = false
-    const michelinImagen = document.querySelector('#michelin');
-    michelinImagen.style.display = 'block';
+    document.querySelector('#michelin').style.display = 'block';
+    document.querySelector("#texto-michelin").removeAttribute("hidden")
   }
 }
 
