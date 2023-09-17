@@ -24,6 +24,7 @@ function guardarInformacion(){
 function mostrarTexto(){
   let texto = `Tu nombre es ${nombre}, tu segundo nombre es ${segundoNombre}, tu apellido es ${apellido} y tenés ${edad} años`
   textoInformacion.innerText = texto;
+  document.querySelector("#titulo").innerText = `Bienvenido ${nombre}!`
   //Esto se ejecuta "una sola vez" para mostrar la informacion
   if(esPrimerEnvio){
     esPrimerEnvio = false
@@ -39,8 +40,6 @@ function ocultarTexto(){
   document.querySelector('#michelin').style.display = 'none';
   document.querySelector("#texto-michelin").setAttribute("hidden", "hidden")
 }
-
-
 
 //agregar funcion con boton de volver a menu de seleccion
 const $botonVolverASelector = document.querySelector("#volver-a-selector")
