@@ -24,7 +24,7 @@ function guardarInformacion(){
 function mostrarTexto(){
   let texto = `Tu nombre es ${nombre}, tu segundo nombre es ${segundoNombre}, tu apellido es ${apellido} y tenés ${edad} años`
   textoInformacion.innerText = texto;
-  document.querySelector("#titulo").innerText = `Bienvenido ${nombre}!`
+  nombre != "" ? document.querySelector("#titulo").innerText = `Bienvenido ${nombre}!` : ""
   //Esto se ejecuta "una sola vez" para mostrar la informacion
   if(esPrimerEnvio){
     esPrimerEnvio = false
@@ -36,6 +36,7 @@ function mostrarTexto(){
 //funcion ocultar texto e imagen
 function ocultarTexto(){
   esPrimerEnvio = true
+  document.querySelector("#titulo").innerText = `Bienvenido!`
   textoInformacion.setAttribute("hidden", "hidden")
   document.querySelector('#michelin').style.display = 'none';
   document.querySelector("#texto-michelin").setAttribute("hidden", "hidden")
