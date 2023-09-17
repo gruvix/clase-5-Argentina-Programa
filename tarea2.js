@@ -7,17 +7,22 @@ let segundoNombre
 let apellido
 let edad
 let esPrimerEnvio = true;
+
 function guardarInformacion(){
   nombre = document.querySelector('#nombre').value
   segundoNombre = document.querySelector('#segundo-nombre').value
   apellido = document.querySelector('#apellido').value
-  edad = Number(document.querySelector('#edad')).value
+  edad = Number(document.querySelector('#edad').value) || 0
 }
 
 function mostrarTexto(){
+  let textoInformacion = document.querySelector("#texto-informacion")
   let texto = `Tu nombre es ${nombre}, tu segundo nombre es ${segundoNombre}, tu apellido es ${apellido} y tenés ${edad} años`
+  textoInformacion.innerText = texto;
+  //Esto se ejecuta una sola vez para mostrar la informacion
   if(esPrimerEnvio){
     esPrimerEnvio = false
+    textoInformacion.removeAttribute("hidden")
     document.querySelector('#michelin').style.display = 'block';
     document.querySelector("#texto-michelin").removeAttribute("hidden")
   }

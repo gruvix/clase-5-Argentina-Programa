@@ -9,11 +9,6 @@
     <link rel="stylesheet" href="css/tarea2.css">
 </head>
 <body>
-    <header>
-        <h1>
-
-        </h1>
-    </header>
 
     <form>
         <label for="nombre">Nombre:</label>
@@ -23,15 +18,17 @@
         <label for="apellido">Apellido:</label>
         <input type="text" id="apellido"/>
         <label for="edad">Edad:</label>
-        <input type="text" id="edad"/>
-
+        <input type="number" id="edad"/>
         <button type="button" id="enviar-informacion">Enviar</button>
         <button type="reset">Limpiar</button>
         <button type="button" id="volver-a-selector">Volver a selector</button>
-
     </form>
     
+
     <body>
+        <main>
+            <h1 hidden id="texto-informacion"></h1>
+        </main>
         <div1>
             <img id="michelin" src="img/michelin.jpeg" alt="Tarea 2" >   
             <p hidden id="texto-michelin">¡Gracias por tu Michelinformación!</p> 
