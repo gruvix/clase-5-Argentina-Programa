@@ -1,4 +1,4 @@
-
+//variables
 let nombre
 let segundoNombre
 let apellido
@@ -6,11 +6,13 @@ let edad
 let esPrimerEnvio = true;
 let textoInformacion = document.querySelector("#texto-informacion")
 
+//asignacion de botones
 const $enviarInformacion = document.querySelector("#enviar-informacion")
 $enviarInformacion.addEventListener("click", guardarInformacion)
 $enviarInformacion.addEventListener("click", mostrarTexto)
 document.querySelector("#reset").addEventListener("click", ocultarTexto)
 
+//funcion guardar todos los datos ingresados en los input
 function guardarInformacion(){
   nombre = document.querySelector('#nombre').value
   segundoNombre = document.querySelector('#segundo-nombre').value
@@ -18,10 +20,11 @@ function guardarInformacion(){
   edad = Number(document.querySelector('#edad').value) || 0
 }
 
+//funcion compilar datos y mostrarlos en un texto
 function mostrarTexto(){
   let texto = `Tu nombre es ${nombre}, tu segundo nombre es ${segundoNombre}, tu apellido es ${apellido} y tenés ${edad} años`
   textoInformacion.innerText = texto;
-  //Esto se ejecuta una sola vez para mostrar la informacion
+  //Esto se ejecuta "una sola vez" para mostrar la informacion
   if(esPrimerEnvio){
     esPrimerEnvio = false
     textoInformacion.removeAttribute("hidden")
@@ -29,7 +32,7 @@ function mostrarTexto(){
     document.querySelector("#texto-michelin").removeAttribute("hidden")
   }
 }
-
+//funcion ocultar texto e imagen
 function ocultarTexto(){
   esPrimerEnvio = true
   textoInformacion.setAttribute("hidden", "hidden")
