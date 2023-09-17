@@ -1,12 +1,15 @@
-const $enviarInformacion = document.querySelector("#enviar-informacion")
-$enviarInformacion.addEventListener("click", guardarInformacion)
-$enviarInformacion.addEventListener("click", mostrarTexto)
 
 let nombre
 let segundoNombre
 let apellido
 let edad
 let esPrimerEnvio = true;
+let textoInformacion = document.querySelector("#texto-informacion")
+
+const $enviarInformacion = document.querySelector("#enviar-informacion")
+$enviarInformacion.addEventListener("click", guardarInformacion)
+$enviarInformacion.addEventListener("click", mostrarTexto)
+document.querySelector("#reset").addEventListener("click", ocultarTexto)
 
 function guardarInformacion(){
   nombre = document.querySelector('#nombre').value
@@ -16,7 +19,6 @@ function guardarInformacion(){
 }
 
 function mostrarTexto(){
-  let textoInformacion = document.querySelector("#texto-informacion")
   let texto = `Tu nombre es ${nombre}, tu segundo nombre es ${segundoNombre}, tu apellido es ${apellido} y tenés ${edad} años`
   textoInformacion.innerText = texto;
   //Esto se ejecuta una sola vez para mostrar la informacion
@@ -26,6 +28,13 @@ function mostrarTexto(){
     document.querySelector('#michelin').style.display = 'block';
     document.querySelector("#texto-michelin").removeAttribute("hidden")
   }
+}
+
+function ocultarTexto(){
+  esPrimerEnvio = true
+  textoInformacion.setAttribute("hidden", "hidden")
+  document.querySelector('#michelin').style.display = 'none';
+  document.querySelector("#texto-michelin").setAttribute("hidden", "hidden")
 }
 
 
