@@ -27,7 +27,7 @@ function habilitarTarea2(){
 }
 //tarea 3
 function habilitarTarea3(){
-  alert('Tarea 3')
+  window.location = "tarea3.html"
 }
 
 /*
