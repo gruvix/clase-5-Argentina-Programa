@@ -1,10 +1,12 @@
 
 
 
-
-
-
-
+//agregar funcion con boton de volver a menu de seleccion
+const $botonVolverASelector = document.querySelector("#volver-a-selector")
+$botonVolverASelector.addEventListener("click", volverASelector) 
+function volverASelector(){
+  window.location = "index.html"
+}
 
 
 //TAREA: En otro archivo distinto,
