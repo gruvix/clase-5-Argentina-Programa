@@ -13,11 +13,11 @@
     </header>
     <form>
         <label for="horas">Horas:</label>
-        <input type="number" id="horas" placeholder="horas..."/>
+        <input size="8" type="number" id="horas" placeholder="horas..."/>
         <label for="minutos">Minutos:</label>
-        <input type="number" id="minutos" placeholder="minutos..."/>
+        <input size="8" type="number" id="minutos" placeholder="minutos..."/>
         <label for="segundos">Segundos:</label>
-        <input type="number" id="segundos" placeholder="segundos..."/>
+        <input size="8" type="number" id="segundos" placeholder="segundos..."/>
         <button type="button" id="calcular">Sumar</button>
         <button type="reset" id="reset-ingreso">Borrar</button>
         <button type="button" id="volver-a-selector">Volver a selector</button>
@@ -27,11 +27,14 @@
     </div>
     <strong>
         <label for="horas">Horas:</label>
-        <input disabled type="number" id="horas-total" />
+        <input size="8" disabled type="number" id="horas-total" />
         <label for="minutos">Minutos:</label>
-        <input disabled type="text" id="minutos-total"/>
+        <input size="8" disabled type="text" id="minutos-total"/>
         <label for="segundos">Segundos:</label>
-        <input disabled type="number" id="segundos-total"/>
+        <input size="8" disabled type="number" id="segundos-total"/>
+        <label for="cantidad-videos">Cantidad de videos:</label>
+        <input size="6" disabled type="number" id="cantidad-videos"/>
+
         <button type="reset" id="reset-totales">Reiniciar</button>
     </strong>
 </body>

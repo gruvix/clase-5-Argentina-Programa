@@ -3,10 +3,13 @@ document.querySelector("#reset-totales").addEventListener("click", reiniciarTiem
 
 //( tiempo[0] = segundos tiempo[1] = minutos tiempo[2] = horas )
 let tiempo = [0, 0, 0]
+let contadorVideos = 0
+imprimirTiempo()
 
 function calcularTiempo(){
   tiempo = sumarContadorTiempo(tiempo)
   tiempo = ordenarTiempo(tiempo)
+  contadorVideos++
   imprimirTiempo()
 }
 
@@ -14,6 +17,7 @@ function reiniciarTiempo(){
   tiempo[0] = 0
   tiempo[1] = 0
   tiempo[2] = 0
+  contadorVideos = 0
   imprimirTiempo()
 }
 
@@ -40,12 +44,8 @@ function imprimirTiempo() {
   document.querySelector("#segundos-total").value = tiempo[0]
   document.querySelector("#minutos-total").value = tiempo[1]
   document.querySelector("#horas-total").value = tiempo[2]
+  document.querySelector("#cantidad-videos").value = contadorVideos
 }
-
-
-tiempo.forEach(element => {
-  console.log(element)
-});
 
 //agregar funcion con boton de volver a menu de seleccion
 const $botonVolverASelector = document.querySelector("#volver-a-selector")
