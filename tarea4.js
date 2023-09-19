@@ -5,10 +5,18 @@ function getRandomFromOneToHundred(){
     return Math.floor(Math.random() * 100) + 1;
 }
 
-for(let i = 0; i < 10 ;i++){
-    let numero = getRandomFromOneToHundred()
+//llama a generar y los manda a agregar
+function generarYAgregar(){
+    for(let i = 0; i < 10 ;i++){
+        let numero = getRandomFromOneToHundred()
+        agregarALista(numero)
+    }
 }
 
+//agrega los nros a lista
+function agregarALista(numero){
+    document.querySelector("#lista-numeros").innerText += <li>numero</li>
+}
 
 //agregar funcion con boton de volver a menu de seleccion
 const $botonVolverASelector = document.querySelector("#volver-a-selector")
