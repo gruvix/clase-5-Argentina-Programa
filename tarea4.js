@@ -1,9 +1,10 @@
 let y = []
 const maximoAleatorio = 100
 const cantidadDeNumeros = 10
+let maximo = maximoAleatorio
 
-document.querySelector("#re-roll").addEventListener("click", Roll)
-Roll()
+document.querySelector("#re-roll").addEventListener("click", Calcular)
+Calcular()
 
 //Generador numeros aleatorios del 1 al 100
 function getRandomFromOneToHundred(){
@@ -36,17 +37,31 @@ function volverASelector(){
 }
 
 //volver a calcular nros
-function Roll(){
+function Calcular(){
     document.querySelector("#lista-numeros").innerHTML = ``
     y = []
     generarYAgregar()
+    calcularMinimoMaximoYRepetido()
 }
 
-function calcularMinimoYMaximo(){
-    max = 0
-    min = maximoAleatorio
+function calcularMinimoMaximoYRepetido(){
+    let max = 0
+    let min = maximo
     y.forEach(element => {
-        
+        if(element > max){
+            max = element
+        }
+        if(element < min){
+            min = element
+        }
+
+
+
+        return {
+            maximo: max,
+            minimo: min,
+            repetido: repe
+        }
     });
 }
 
