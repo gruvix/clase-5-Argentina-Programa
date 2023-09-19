@@ -1,4 +1,7 @@
 
+document.querySelector("#re-roll").addEventListener("click", reRoll)
+
+let y = []
 generarYAgregar()
 
 //Generador numeros aleatorios del 1 al 100
@@ -16,6 +19,7 @@ function generarYAgregar(){
 
 //agrega los nros a lista
 function agregarALista(numero){
+    y.push(numero)
     document.querySelector("#lista-numeros").innerHTML += `<li>${numero}</li>`
 }
 
@@ -24,6 +28,12 @@ const $botonVolverASelector = document.querySelector("#volver-a-selector")
 $botonVolverASelector.addEventListener("click", volverASelector) 
 function volverASelector(){
   window.location = "index.html"
+}
+
+function reRoll(){
+    document.querySelector("#lista-numeros").innerHTML = ``
+    y = []
+    generarYAgregar()
 }
 
 
