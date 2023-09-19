@@ -1,4 +1,5 @@
 
+generarYAgregar()
 
 //Generador numeros aleatorios del 1 al 100
 function getRandomFromOneToHundred(){
@@ -15,7 +16,7 @@ function generarYAgregar(){
 
 //agrega los nros a lista
 function agregarALista(numero){
-    document.querySelector("#lista-numeros").innerText += <li>numero</li>
+    document.querySelector("#lista-numeros").innerHTML += `<li>${numero}</li>`
 }
 
 //agregar funcion con boton de volver a menu de seleccion
