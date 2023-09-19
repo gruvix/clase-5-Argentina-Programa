@@ -1,10 +1,13 @@
 
 
+//Generador numeros aleatorios del 1 al 100
+function getRandomFromOneToHundred(){
+    return Math.floor(Math.random() * 100) + 1;
+}
 
-
-
-
-
+for(let i = 0; i < 10 ;i++){
+    let numero = getRandomFromOneToHundred()
+}
 
 
 //agregar funcion con boton de volver a menu de seleccion
