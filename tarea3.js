@@ -1,4 +1,5 @@
 document.querySelector("#calcular").addEventListener("click", calcularTiempo)
+document.querySelector("#reset-totales").addEventListener("click", reiniciarTiempo)
 
 //( tiempo[0] = segundos tiempo[1] = minutos tiempo[2] = horas )
 let tiempo = [0, 0, 0]
@@ -9,7 +10,12 @@ function calcularTiempo(){
   imprimirTiempo()
 }
 
-
+function reiniciarTiempo(){
+  tiempo[0] = 0
+  tiempo[1] = 0
+  tiempo[2] = 0
+  imprimirTiempo()
+}
 
 function sumarContadorTiempo(){
 tiempoSuma = tiempo
