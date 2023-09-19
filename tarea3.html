@@ -3,22 +3,36 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Sumador de tiempo</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     
 </head>
 <body>
+    <header>
+        Sumador de Tiempo
+    </header>
     <form>
         <label for="horas">Horas:</label>
-        <input type="number" id="horas"/>
+        <input type="number" id="horas" placeholder="24"/>
         <label for="minutos">Minutos:</label>
-        <input type="text" id="minutos"/>
+        <input type="number" id="minutos" placeholder="60"/>
         <label for="segundos">Segundos:</label>
-        <input type="number" id="segundos"/>
-        <button type="button" id="calcular">Calcular</button>
+        <input type="number" id="segundos" placeholder="60"/>
+        <button type="button" id="calcular">Sumar</button>
         <button type="reset" id="reset">Borrar</button>
         <button type="button" id="volver-a-selector">Volver a selector</button>
     </form>
+    <div>
+        Total:
+    </div>
+    <strong>
+        <label for="horas">Horas:</label>
+        <input disabled type="number" id="horas-total" />
+        <label for="minutos">Minutos:</label>
+        <input disabled type="text" id="minutos-total"/>
+        <label for="segundos">Segundos:</label>
+        <input disabled type="number" id="segundos-total"/>
+    </strong>
 </body>
 <script src='tarea3.js'></script>
 </html>
