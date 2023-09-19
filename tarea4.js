@@ -1,8 +1,8 @@
-document.querySelector("#re-roll").addEventListener("click", Roll)
-
 let y = []
 const maximoAleatorio = 100
 const cantidadDeNumeros = 10
+
+document.querySelector("#re-roll").addEventListener("click", Roll)
 Roll()
 
 //Generador numeros aleatorios del 1 al 100
@@ -14,7 +14,9 @@ function getRandomFromOneToHundred(){
 
 //llama a generar y los manda a agregar
 function generarYAgregar(){
-    for(let i = 0; i < 10 ;i++){
+    cantidad = document.querySelector("#cantidad-numeros").value
+    cantidad < 1 ? cantidad = cantidadDeNumeros : cantidad = cantidad
+    for(let i = 0; i < cantidad ;i++){
         let numero = getRandomFromOneToHundred()
         agregarALista(numero)
     }
