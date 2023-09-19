@@ -44,9 +44,12 @@ function Calcular(){
     calcularMinimoMaximoYRepetido()
 }
 
+//podría ser mas eficiente si se ordenara primero
 function calcularMinimoMaximoYRepetido(){
     let max = 0
     let min = maximo
+    let repe = NaN
+
     y.forEach(element => {
         if(element > max){
             max = element
@@ -55,6 +58,10 @@ function calcularMinimoMaximoYRepetido(){
             min = element
         }
 
+
+        y.forEach(nro => {//Chekear si el nro se encuentra repetido
+            if
+        });
 
 
         return {
