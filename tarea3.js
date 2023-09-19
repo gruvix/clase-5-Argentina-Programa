@@ -9,6 +9,8 @@ function calcularTiempo(){
   imprimirTiempo()
 }
 
+
+
 function sumarContadorTiempo(){
 tiempoSuma = tiempo
 tiempoSuma[0] += Number(document.querySelector("#segundos").value)
@@ -29,6 +31,9 @@ return tiempoOrden;
 
 function imprimirTiempo() {
   console.log(`${tiempo[2]}hs  ${tiempo[1]}'  ${tiempo[0]}"`)
+  document.querySelector("#segundos-total").value = tiempo[0]
+  document.querySelector("#minutos-total").value = tiempo[1]
+  document.querySelector("#horas-total").value = tiempo[2]
 }
 
 
