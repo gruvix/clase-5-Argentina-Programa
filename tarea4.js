@@ -1,12 +1,15 @@
-
-document.querySelector("#re-roll").addEventListener("click", reRoll)
+document.querySelector("#re-roll").addEventListener("click", Roll)
 
 let y = []
-generarYAgregar()
+const maximoAleatorio = 100
+const cantidadDeNumeros = 10
+Roll()
 
 //Generador numeros aleatorios del 1 al 100
 function getRandomFromOneToHundred(){
-    return Math.floor(Math.random() * 100) + 1;
+    maximo = document.querySelector("#maximo-random").value
+    maximo < 1 ? maximo = maximoAleatorio : maximo = maximo
+    return Math.floor(Math.random() * maximo) + 1;
 }
 
 //llama a generar y los manda a agregar
@@ -30,12 +33,20 @@ function volverASelector(){
   window.location = "index.html"
 }
 
-function reRoll(){
+//volver a calcular nros
+function Roll(){
     document.querySelector("#lista-numeros").innerHTML = ``
     y = []
     generarYAgregar()
 }
 
+function calcularMinimoYMaximo(){
+    max = 0
+    min = maximoAleatorio
+    y.forEach(element => {
+        
+    });
+}
 
 //TAREA: En otro archivo distinto,
 // Crear una lista de <ol> y <li> que contengan sólo números.
