@@ -1,5 +1,5 @@
 //Indice de tareas - todas las tareas deben estar declaradas en este array
-let funcionesBotones = [habilitarTarea1, habilitarTarea2, habilitarTarea3]
+let funcionesBotones = [habilitarTarea1, habilitarTarea2, habilitarTarea3, habilitarTarea4]
 
 const $botones = document.querySelectorAll(".botones")
 for(let i = 0; i< $botones.length; i++){
@@ -28,6 +28,10 @@ function habilitarTarea2(){
 //tarea 3
 function habilitarTarea3(){
   window.location = "tarea3.html"
+}
+//tarea 4
+function habilitarTarea4(){
+  window.location = "tarea4.html"
 }
 
 /*
