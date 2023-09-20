@@ -70,45 +70,6 @@ function imprimirTopes(){
 
 }
 
-// podría ser mas eficiente si se ordenara primero
-function calcularMinimoMaximoYRepetido(){
-    let max = 0
-    let min = maximo
-    let vectorRepes = {}
-
-    for (let i = 0; i < y.length; i++) {
-
-        if(y[i] > max){
-            max = y[i]
-        }
-        if(y[i] < min){
-            min = y[i]
-        }
-        vectorRepes[i] = 0
-        for (let j = 0; j < y.length; j++) {
-            y[i] === y[j] ? vectorRepes[i]++ : 0
-        }
-    }//el vector Y hace un recorrido
-
-    let indiceMaximaRepeticion = 0
-    for (let i = 0; i < vectorRepes.length; i++) {
-        if (vectorRepes[i] > vectorRepes[indiceMaximaRepeticion]){
-            indiceMaximaRepeticion = i;
-        }
-        
-    }
-
-
-        topes.maximo = max
-        topes.minimo = min
-        topes.repeticiones = vectorRepes[indiceMaximaRepeticion]
-        topes.repetido = y[indiceMaximaRepeticion]
-
-}
-
-
-
-
 function calcularTopes() {
     if (y.length === 0) {
         return {
