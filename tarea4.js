@@ -53,12 +53,9 @@ function Calcular(){
     topes = calcularTopes()
     //calcularMinimoMaximoYRepetido()
     imprimirTopes()
-    console.log(topes)
 }
 
 function imprimirTopes(){
-    console.log(topes)
-
     document.querySelector("#maximo").innerText = `El máximo es ${topes.maximo}`
     document.querySelector("#minimo").innerText = `El mínimo es ${topes.minimo}`
     if(topes.repeticiones <= 1){
@@ -84,6 +81,7 @@ function calcularTopes() {
     let min = y[0];
     let vectorRepes = {};
 
+    //En este for calcula maximo, minimo y suma las repeticiones de cada nro
     for (let i = 0; i < y.length; i++) {
         if (y[i] > max) {
             max = y[i];
@@ -100,6 +98,7 @@ function calcularTopes() {
     let maxRepeticiones = 0;
     let repetido = undefined;
 
+    //Busca el nro mas repetido
     for (let valor in vectorRepes) {
         if (vectorRepes[valor] > maxRepeticiones) {
             maxRepeticiones = vectorRepes[valor];
